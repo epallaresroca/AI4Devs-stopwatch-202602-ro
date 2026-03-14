@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f4f7fb 0%, #dde7f5 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+}
+
+.app {
+  width: 100%;
+  max-width: 700px;
+  padding: 24px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.mode-switch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.mode-btn {
+  border: none;
+  background: #e5e7eb;
+  color: #111827;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.mode-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.label {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.display {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: #0f172a;
+  color: #22c55e;
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.25);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 100px;
+  transition: 0.2s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.countdown-inputs {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.countdown-inputs div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.countdown-inputs input {
+  width: 120px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-top: 18px;
+  font-weight: bold;
+  color: #dc2626;
+  min-height: 24px;
+}
+
+@media (max-width: 600px) {
+  .display {
+    font-size: 2.7rem;
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}

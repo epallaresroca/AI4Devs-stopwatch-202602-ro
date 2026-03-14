@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI4Devs Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">Stopwatch & Countdown</h1>
+
+    <section class="card">
+      <div class="mode-switch">
+        <button id="showStopwatch" class="mode-btn active">Cronómetro</button>
+        <button id="showCountdown" class="mode-btn">Cuenta atrás</button>
+      </div>
+
+      <div id="stopwatchSection" class="panel active">
+        <p class="label">Cronómetro</p>
+        <div id="stopwatchDisplay" class="display">00:00:00</div>
+
+        <div class="controls">
+          <button id="startStopwatch">Start</button>
+          <button id="pauseStopwatch">Pause</button>
+          <button id="resetStopwatch">Reset</button>
+        </div>
+      </div>
+
+      <div id="countdownSection" class="panel">
+        <p class="label">Cuenta atrás</p>
+
+        <div class="countdown-inputs">
+          <div>
+            <label for="minutesInput">Minutos</label>
+            <input id="minutesInput" type="number" min="0" value="1" />
+          </div>
+          <div>
+            <label for="secondsInput">Segundos</label>
+            <input id="secondsInput" type="number" min="0" max="59" value="0" />
+          </div>
+        </div>
+
+        <div id="countdownDisplay" class="display">01:00</div>
+
+        <div class="controls">
+          <button id="startCountdown">Start</button>
+          <button id="pauseCountdown">Pause</button>
+          <button id="resetCountdown">Reset</button>
+        </div>
+
+        <p id="countdownMessage" class="message"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
