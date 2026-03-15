@@ -92,8 +92,8 @@ function updateCountdownDisplay() {
 }
 
 function readCountdownInputs() {
-  const minutes = parseInt(minutesInput.value, 10) || 0;
-  const seconds = parseInt(secondsInput.value, 10) || 0;
+  const minutes = Math.max(0, parseInt(minutesInput.value, 10) || 0);
+  const seconds = Math.min(59, Math.max(0, parseInt(secondsInput.value, 10) || 0));
   return minutes * 60 + seconds;
 }
 
